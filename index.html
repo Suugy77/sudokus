@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sudoku Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="top-bar">
+    <h1>SUDOKU</h1>
+    <div class="controls">
+      <button id="newGameButton">NEW GAME </button>
+      <button id="checkButton">CHECK</button>
+      <button id="exitButton">EXIT</button>
+      <button id="toggleTheme">DARK / LIGHT</button>
+    </div>
+    <div id="timer">TIME 00:00</div>
+  </div>
+
+  <div class="grid" id="sudoku-grid"></div>
+
+  <audio id="clickSound" src="sounds/click.mp3" preload="auto"></audio>
+  <audio id="errorSound" src="sounds/error.mp3" preload="auto"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>

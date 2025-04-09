@@ -1,0 +1,67 @@
+Introduction
+
+For my final project in CS50, I developed a fully interactive Sudoku game using HTML, CSS, and JavaScript. The game is playable entirely within a web browser and features a randomly generated 9x9 grid, a timer, a theme toggle for dark and light mode, sound effects, and a clean, user-friendly interface. Although the game is relatively simple on the surface, the underlying logic and structure provided an ideal platform for me to demonstrate and deepen the skills I gained throughout the CS50 course.
+
+Why Sudoku?
+
+I chose Sudoku because it represents the intersection between logic, user interaction, and aesthetic design. I’ve always been interested in logic puzzles, and creating my own Sudoku game was a chance to combine that interest with programming. Sudoku also presented the right level of challenge: it was neither trivial nor too complex for a solo project. It required me to think about algorithms, UI/UX design, event handling, and state management, all of which aligned perfectly with the principles taught in CS50.
+
+Implementation Overview
+
+The project consists of three main components:
+
+HTML defines the structure of the page, including the Sudoku grid container, control buttons (New Game, Check, Exit, Toggle Theme), timer display, and audio elements.
+
+CSS styles the interface. I used Flexbox and CSS Grid to center and align the board and buttons. I also implemented a responsive design so the game adjusts well on different screen sizes. The theme toggle is implemented using a .dark-mode class, which changes background and text colors dynamically with transitions.
+
+JavaScript drives the game’s functionality. It handles dynamic grid generation, puzzle logic, timer updates, audio playback, and theme switching. I use DOM manipulation to build the grid in real-time. Inputs are handled via event listeners, and two audio cues—one for input (clickSound) and one for invalid checking (errorSound)—enhance interactivity.
+
+Puzzle Generation
+
+One of the core parts of the project was puzzle generation. Initially, I created a function that randomly filled about 30% of the cells with numbers, avoiding immediate duplicates in rows. However, I later improved this by implementing a backtracking algorithm to fill the entire 9x9 grid with a valid Sudoku solution and then randomly removed 50–60 cells to form the actual puzzle. This ensures that the starting puzzle always adheres to Sudoku rules.
+
+Timer and Sound Effects
+
+To improve engagement, I implemented a timer using JavaScript’s setInterval(). The timer starts with every new game and updates once per second. For feedback, I added two sound effects using <audio> elements. A click sound plays on every input, while an error sound is triggered when the user clicks the “Check” button.
+
+Currently, the “Check” button does not validate the solution; it only serves as a placeholder for future development. I plan to implement full puzzle validation using row-column-box comparison or backtracking.
+
+Dark Mode and UX Considerations
+
+Adding a light/dark mode toggle allowed me to apply dynamic styling changes using CSS. I used smooth transitions to improve user experience. All buttons and inputs were styled for accessibility and visual clarity. The layout remains consistent across devices thanks to responsive CSS.
+
+Challenges and Learning
+
+I encountered several challenges during development. Managing the grid dynamically while preserving styling was tricky, especially aligning the layout across screen sizes. I had to debug a few issues related to input events and DOM updates. Implementing a proper Sudoku generator that avoids duplicates in every row, column, and subgrid required deep algorithmic thinking and recursive logic.
+
+This project helped reinforce my understanding of:
+
+DOM manipulation
+
+Event-driven programming
+
+Timers and intervals
+
+CSS layout systems (Grid/Flexbox)
+
+Audio API
+
+Backtracking algorithms
+
+Future Improvements
+
+In the next iteration of this project, I would like to:
+
+Implement full Sudoku solution validation.
+
+Add difficulty levels (easy, medium, hard).
+
+Store high scores using localStorage.
+
+Add a hint system.
+
+Mobile-first UI optimizations.
+
+Conclusion
+
+Building this project from scratch was a fulfilling experience. It allowed me to combine logic, design, and interaction in a real-world web application. I am proud of the progress I’ve made through CS50, and this project reflects my growth as a programmer. I look forward to continuing my learning journey and exploring more advanced topics in software development. Thank you to the CS50 staff for this life-changing course.
